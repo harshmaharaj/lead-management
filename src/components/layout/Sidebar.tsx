@@ -60,6 +60,10 @@ export function Sidebar() {
     setIsExpanded(!isExpanded)
   }
 
+  const handleNavigation = (path: string) => {
+    navigate(path)
+  }
+
   return (
     <Drawer
       variant="permanent"
@@ -83,7 +87,7 @@ export function Sidebar() {
             <Tooltip title={!isExpanded ? item.label : ''} placement="right">
               <ListItemButton
                 selected={location.pathname === item.path}
-                onClick={() => navigate(item.path)}
+                onClick={() => handleNavigation(item.path)}
                 sx={{
                   minHeight: 48,
                   justifyContent: isExpanded ? 'initial' : 'center',

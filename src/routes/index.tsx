@@ -6,6 +6,7 @@ import { SignUpPage } from '../pages/auth/SignUp'
 import { LeadsPage } from '../pages/leads/Leads'
 import { DashboardPage } from '../pages/dashboard/Dashboard'
 import { Loading } from '../components/common/Loading'
+import { Settings } from '../pages/settings/Settings'
 
 export function AppRoutes() {
   const { user, loading } = useAuth()
@@ -22,14 +23,15 @@ export function AppRoutes() {
       {/* Protected Routes */}
       {user ? (
         <Route element={<Layout />}>
+          <Route path="/" element={<Navigate to="/leads" />} />
           <Route path="/leads" element={<LeadsPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="*" element={<Navigate to="/leads" />} />
         </Route>
       ) : (
         <Route path="*" element={<Navigate to="/login" />} />
       )}
-
-      <Route path="*" element={<Navigate to={user ? "/leads" : "/login"} />} />
     </Routes>
   )
 } 

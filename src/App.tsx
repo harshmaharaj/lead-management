@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { AuthProvider } from './context/AuthContext'
 import { AppRoutes } from './routes'
+import { SnackbarProvider } from 'notistack'
 
 const theme = createTheme({
   typography: {
@@ -28,7 +29,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <AuthProvider>
-            <AppRoutes />
+            <SnackbarProvider maxSnack={3}>
+              <AppRoutes />
+            </SnackbarProvider>
           </AuthProvider>
         </BrowserRouter>
       </ThemeProvider>

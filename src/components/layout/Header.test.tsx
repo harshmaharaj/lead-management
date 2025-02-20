@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Header } from './Header'
 import { AuthProvider } from '../../context/AuthContext'
 import { describe, it, expect } from 'vitest'
+import '@testing-library/jest-dom'
 
 describe('Header', () => {
   it('renders the app title', () => {

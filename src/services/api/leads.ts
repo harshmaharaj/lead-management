@@ -2,13 +2,13 @@ import { supabase } from '../supabase/client'
 
 export interface Lead {
   id: string
+  status: 'New' | 'Contacted' | 'Qualified' | 'Proposal' | 'Negotiation'
   name: string
+  value: number
   company: string
   email: string
-  phone: string
-  status: 'New' | 'Contacted' | 'Qualified' | 'Proposal' | 'Negotiation'
-  value: number
   assignedTo: string | null
+  phone?: string | null
   createdAt: string
   updatedAt: string
 }

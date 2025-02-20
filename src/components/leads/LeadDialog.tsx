@@ -15,6 +15,16 @@ import {
 import type { Lead } from '../../services/api/leads'
 import { leadSchema, type LeadFormData } from '../../schemas/lead'
 
+interface LeadFormData {
+  status: Lead['status']
+  name: string
+  value: number
+  company: string
+  email: string
+  assignedTo: string | null
+  phone?: string | null  // Make phone nullable
+}
+
 interface LeadDialogProps {
   open: boolean
   onClose: () => void
