@@ -1,0 +1,15 @@
+> vite
+
+The CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more 
+The CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.
+
+  VITE v5.4.14  ready in 90 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+1:06:38 AM [vite] hmr update /src/App.tsx
+1:06:38 AM [vite] hmr update /src/pages/auth/Login.tsx
+1:06:38 AM [vite] hmr update /src/routes/index.tsx
+
+npm run dev
