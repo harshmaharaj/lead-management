@@ -1,5 +1,8 @@
 # Lead Management System
 
+[![CI](https://github.com/YOUR_USERNAME/lead-management/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/lead-management/actions/workflows/ci.yml)
+[![CD](https://github.com/YOUR_USERNAME/lead-management/actions/workflows/cd.yml/badge.svg)](https://github.com/YOUR_USERNAME/lead-management/actions/workflows/cd.yml)
+
 A modern lead management system built with React, TypeScript, and Material-UI.
 
 ## Features
